@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>carousal</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /*
+        SPACING SYSTEM (px)
+        2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+        FONT SIZE SYSTEM (px)
+        10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+        */
+
+      /*
+        MAIN COLOR: #087f5b
+        GREY COLOR: #343a40
+        */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+        color: #343a40;
+        line-height: 1;
+      }
+      img {
+        height: 200px;
+        transform: scale(1.5);
+        border-radius: 8px;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+      }
+      .carousel {
+        background-color: #087f5b;
+        width: 800px;
+        margin: 100px auto;
+        border-radius: 8px;
+        color: white;
+        padding: 32px;
+        display: flex;
+        gap: 86px;
+        align-items: center;
+        padding-left: 86px;
+      }
+      .test_text {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.5;
+        margin-bottom: 32px;
+      }
+      .test_author {
+        font-size: 14px;
+        color: #c3fae8;
+        margin-bottom: 4px;
+      }
+      .test_job {
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="carousel">
+      <img src="/maria.jpg" alt="carousal" />
+      <blockquote class="testmonial">
+        <p class="test_text">
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor est
+          veniam nulla officia aspernatur asperiores adipisci voluptate. Beatae
+          rem, architecto ipsum sunt ducimus deleniti quas optio voluptatibus,
+          magnam sapiente quis!"
+        </p>
+        <p class="test_author">Maria de Almeida</p>
+        <p class="test_job">Senior proudct manager at EDB Comercial</p>
+      </blockquote>
+      <button class="btn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="btn_icon"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15 19l-7-7 7-7"
+          />
+        </svg>
+      </button>
+      <button class="btn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="btn_icon"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15 19l-7-7 7-7"
+          />
+        </svg>
+      </button>
+      <!-- <div class="dots">
+          <button class="dot dot--fill">&nbsp;</button>
+          <button class="dot">&nbsp;</button>
+          <button class="dot">&nbsp;</button>
+          <button class="dot">&nbsp;</button>
+        </div> -->
+    </div>
+  </body>
+</html>
