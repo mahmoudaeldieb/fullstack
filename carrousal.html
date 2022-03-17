@@ -49,6 +49,7 @@
         gap: 86px;
         align-items: center;
         padding-left: 86px;
+        position: relative;
       }
       .test_text {
         font-size: 18px;
@@ -63,6 +64,49 @@
       }
       .test_job {
         font-size: 12px;
+      }
+      .btn {
+        color: #087f5b;
+        background-color: white;
+        height: 40px;
+        width: 40px;
+        border: none;
+        border-radius: 50%;
+        position: absolute; /*دي معناها ان العناصر اللي معاها في نفس المكان هتتعامل معاها على اكنها مش موجودة */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+        cursor: pointer;
+      }
+      .btn_icon {
+        width: 40px;
+        height: 40px;
+        stroke: #087f5b;
+      }
+      .btn--left {
+        /*خصائص بالنسبة للعنصر الأب يعني يتحرك بالنسبة للأب */
+        left: 0;
+        top: 50%;
+        /*خصائص بالنسبة للعنصر الأب يعني يتحرك بالنسبة لنفسها وأبعادها */
+
+        transform: translate(
+          -50%,
+          -50%
+        ); /* translate بتحرك العنصر بالقيمة المعطاة بالنسبة لحجمه*/
+      }
+      .btn--right {
+        right: 0%;
+        top: 50%;
+        transform: translate(50%, -50%);
+      }
+      .dots {
+        position: absolute;
+        display: flex;
+        gap: 12px;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, 32px);
       }
     </style>
   </head>
@@ -79,7 +123,7 @@
         <p class="test_author">Maria de Almeida</p>
         <p class="test_job">Senior proudct manager at EDB Comercial</p>
       </blockquote>
-      <button class="btn">
+      <button class="btn btn--left">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="btn_icon"
@@ -95,7 +139,7 @@
           />
         </svg>
       </button>
-      <button class="btn">
+      <button class="btn btn--right">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="btn_icon"
@@ -107,16 +151,16 @@
           <path
             stroke-linecap="round"
             stroke-linejoin="round"
-            d="M15 19l-7-7 7-7"
+            d="M9 5l7 7-7 7"
           />
         </svg>
       </button>
-      <!-- <div class="dots">
-          <button class="dot dot--fill">&nbsp;</button>
-          <button class="dot">&nbsp;</button>
-          <button class="dot">&nbsp;</button>
-          <button class="dot">&nbsp;</button>
-        </div> -->
+      <div class="dots">
+        <button class="dot dot--fill">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+      </div>
     </div>
   </body>
 </html>
