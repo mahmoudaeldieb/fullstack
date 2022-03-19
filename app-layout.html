@@ -40,6 +40,11 @@
 
       section {
         background-color: #e9ecef;
+        display: flex;
+        flex-direction: column;
+        padding: 40px;
+        gap: 40px;
+        overflow: scroll;
       }
       aside {
         background-color: #e9ecef;
@@ -63,6 +68,14 @@
       button:last-child {
         background-color: #d6336c !important;
         margin-left: auto; /*دي بتخليه يعمل مارجين من الشمال لاقصى اليمين ويحسب المساحة تلقائي */
+      }
+      .email {
+        background-color: #868e96;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 96px;
+        flex-shrink: 0; /*دي استخدمناها لما عملنا over flow:scroll; عشان العنصر بيحصله شرينك عشان يناسب الحجم  فاحنا بنلغيه*/
       }
     </style>
   </head>
